@@ -12,7 +12,7 @@ public class App extends JFrame {
     JTextField textField;
     JCheckBox checkBox;
     GridBagConstraints c;
-    //String cad = "";
+    Font negrita=new Font("SansSerif", Font.BOLD, 18);
 
     App() {
 
@@ -24,6 +24,7 @@ public class App extends JFrame {
         c.fill = GridBagConstraints.HORIZONTAL;
         label = new JLabel("Introduce un texto cualquiera");
         // centra la label horizontalmente
+        label.setFont(negrita);
         label.setHorizontalAlignment(0);
         panel.add(label, c);
 
@@ -36,6 +37,7 @@ public class App extends JFrame {
         panel.add(textField, c);
 
         checkBox = new JCheckBox("Convertir a mayusculas");
+        checkBox.setFont(negrita);
         c.gridy = 2;
         checkBox.addItemListener(new ItemListener() {
             @Override
@@ -59,7 +61,7 @@ public class App extends JFrame {
 
 
     public static void main(String[] args) throws Exception {
-        App a = new App();
-
+        //App a = new App();
+        Practica2 p2= new Practica2();
     }
 }
