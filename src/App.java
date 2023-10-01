@@ -12,7 +12,7 @@ public class App extends JFrame {
     JTextField textField;
     JCheckBox checkBox;
     GridBagConstraints c;
-    Font negrita=new Font("SansSerif", Font.BOLD, 18);
+    Font negrita = new Font("SansSerif", Font.BOLD, 18);
 
     App() {
 
@@ -44,8 +44,9 @@ public class App extends JFrame {
             public void itemStateChanged(ItemEvent e) {
                 if (checkBox.isSelected()) {
                     textField.setText(textField.getText().toUpperCase());
-                }else textField.setText(textField.getText().toLowerCase(getLocale()));
-                
+                } else
+                    textField.setText(textField.getText().toLowerCase(getLocale()));
+
             }
         });
         panel.add(checkBox, c);
@@ -59,9 +60,11 @@ public class App extends JFrame {
         setVisible(true);
     }
 
-
     public static void main(String[] args) throws Exception {
-        //App a = new App();
-        Practica2 p2= new Practica2();
+        // App a = new App();
+        Practica2 p2 = new Practica2();
+        p2.setTitle("Operación Racional");
+        p2.setSize(800, 400);
+        p2.setVisible(true);
     }
 }
