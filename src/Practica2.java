@@ -181,27 +181,32 @@ public class Practica2 extends JFrame implements ItemListener, ActionListener {
                 JBcalc.setEnabled(true);
                 float num1, num2;
                 float den1, den2;
+                try {
 
-                num1 = Float.parseFloat(JTFnum1.getText());
-                num2 = Float.parseFloat(JTFnum2.getText());
-                den1 = Float.parseFloat(JTFden1.getText());
-                den2 = Float.parseFloat(JTFden2.getText());
-                if (checkBox == checkbox_Suma) {
-                        resultado1 = num1 + den1;
-                        resultado2 = num2 + den2;
-                }
-                if (checkBox == checkbox_Resta) {
-                        resultado1 = num1 - den1;
-                        resultado2 = num2 - den2;
+                        num1 = Float.parseFloat(JTFnum1.getText());
+                        num2 = Float.parseFloat(JTFnum2.getText());
+                        den1 = Float.parseFloat(JTFden1.getText());
+                        den2 = Float.parseFloat(JTFden2.getText());
 
-                }
-                if (checkBox == checkbox_Multiplicacion) {
-                        resultado1 = num1 * den1;
-                        resultado2 = num2 * den2;
-                }
-                if (checkBox == checkbox_Division) {
-                        resultado1 = num1 / den1;
-                        resultado2 = num2 / den2;
+                        if (checkBox == checkbox_Suma) {
+                                resultado1 = num1 + den1;
+                                resultado2 = num2 + den2;
+                        }
+                        if (checkBox == checkbox_Resta) {
+                                resultado1 = num1 - den1;
+                                resultado2 = num2 - den2;
+
+                        }
+                        if (checkBox == checkbox_Multiplicacion) {
+                                resultado1 = num1 * den1;
+                                resultado2 = num2 * den2;
+                        }
+                        if (checkBox == checkbox_Division) {
+                                resultado1 = num1 / den1;
+                                resultado2 = num2 / den2;
+                        }
+                } catch (Exception ex) {
+                        System.err.println(ex.getMessage());
                 }
 
         }
